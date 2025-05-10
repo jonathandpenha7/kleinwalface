@@ -6,66 +6,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>From Your Kleinwalface ❤️</title>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: sans-serif;
-    }
-
-    body {
-      width: 100%;
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: #d9a6a6;
-    }
-
-    .container {
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-      align-items: center;
-      gap: 20px;
-      max-width: 500px;
-      margin: 20px;
-    }
-
-    .container .tenor-gif-embed {
-      max-width: 200px;
-    }
-
-    .container .btn {
-      display: flex;
-      gap: 25px;
-    }
-
-    .btn a {
-      text-decoration: none;
-      color: #111;
-      background: #fff;
-      padding: 10px 25px;
-      border-radius: 66px;
-      box-shadow: 0.5rem 1rem 3rem hsl(0, 0%, 0%, 0.3);
-    }
-  </style>
-
-  <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
-
+  <link rel="stylesheet" href="./style.css" />
 </head>
 
 <body>
-  <div class="container" id="container">
-
-    <div class="tenor-gif-embed" data-postid="22885016" data-share-method="host" data-aspect-ratio="1.04918" data-width="100%">
-      <a href="https://tenor.com/view/manja-gif-22885016">Manja Sticker</a> from <a href="https://tenor.com/search/manja-stickers">Manja Stickers</a>
+  <div class="container">
+    <div class="tenor-gif-embed" data-postid="22885016" data-share-method="host" data-aspect-ratio="1.04918"
+      data-width="100%">
+      <a href="https://tenor.com/view/manja-gif-22885016">Manja Sticker</a> from
+      <a href="https://tenor.com/search/manja-stickers">Manja Stickers</a>
     </div>
 
-    <h1 id="title">Can We Find Our Way Back? 💭</h1>
+    <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
 
-    <p id="message">
+    <h1>Can We Find Our Way Back? 💭</h1>
+
+    <p>
       I know I hurt you. And what hurts me even more is knowing I can’t hold you right now and say these words face-to-face.<br><br>
       Long distance has made this harder, but it hasn’t changed one thing: how much I love you.<br><br>
       You are the most precious part of my world — the softness in my day, the peace in my chaos, the warmth I wish I could reach through this screen and touch right now.<br><br>
@@ -73,102 +29,12 @@
       Will you let your Kleinwalface try again?
     </p>
 
-    <div class="btn" id="buttons">
-      <a href="javascript:void(0)" onclick="nextPage(1)">Yes, I still believe in us 💖</a>
-      <a href="javascript:void(0)" onclick="nextPage(2)">Not ready yet... 💔</a>
+    <div class="btn">
+      <a href="yes.html">Yes, I still believe in us 💖</a>
+      <a href="no1.html">Not ready yet... 💔</a>
     </div>
-
   </div>
-
-  <script>
-    function nextPage(choice) {
-      const container = document.getElementById("container");
-      const title = document.getElementById("title");
-      const message = document.getElementById("message");
-      const buttons = document.getElementById("buttons");
-
-      // Clear current buttons
-      buttons.innerHTML = '';
-
-      // Choice 1: Yes, I still believe in us 💖
-      if (choice === 1) {
-        title.innerHTML = "You still chose me... 💖";
-        message.innerHTML = "Thank you for forgiving me — for seeing my heart through my worst moment.<br><br>" +
-          "I don’t take this lightly. I promise to be more patient, more open, and more gentle with the love you so freely give me.<br><br>" +
-          "You mean the world to your Kleinwalface — and I’ll spend every day making sure you never forget that again.<br><br>" +
-          "We may be far apart, but my heart is holding yours — always. 💌";
-
-        // Adding more buttons for next stage (yes.html)
-        buttons.innerHTML = `
-          <a href="javascript:void(0)" onclick="nextPage(3)">I forgive you 🥺</a>
-        `;
-      }
-
-      // Choice 2: Not ready yet... 💔
-      else if (choice === 2) {
-        title.innerHTML = "I know I hurt you 😞";
-        message.innerHTML = "What I said wasn’t fair. I acted out of frustration, but that’s no excuse.<br><br>" +
-          "You didn’t deserve those words — especially not from someone who loves you this much.<br><br>" +
-          "If your answer is 'not now,' I understand. I just hope when you're ready, you'll let me try again… with more love, more patience, and the respect you always deserved. 🤍";
-
-        // Adding more buttons for next stage (no1.html)
-        buttons.innerHTML = `
-          <a href="javascript:void(0)" onclick="nextPage(4)">I believe in second chances ❤️</a>
-          <a href="javascript:void(0)" onclick="nextPage(5)">I need more time 💔</a>
-        `;
-      }
-
-      // Choice 3: I forgive you 🥺 (yes.html)
-      else if (choice === 3) {
-        title.innerHTML = "You forgave me... 💖";
-        message.innerHTML = "Thank you for understanding. Your forgiveness means everything to me.<br><br>" +
-          "I promise to learn from this and be more patient, more open, and more kind to you.<br><br>" +
-          "I’ll never take you for granted again. You are everything to me, and I will spend each day making sure you know that.";
-
-        buttons.innerHTML = `
-          <a href="javascript:void(0)" onclick="nextPage(6)">Let’s make things right together 💑</a>
-        `;
-      }
-
-      // Choice 4: I believe in second chances ❤️ (no1.html)
-      else if (choice === 4) {
-        title.innerHTML = "I’m glad you believe in us 💖";
-        message.innerHTML = "I know I messed up, but I’ll prove that I can be better for us.<br><br>" +
-          "Thank you for giving me a second chance. I promise I’ll never take it for granted again.<br><br>" +
-          "You mean everything to me, and I’ll work every day to make things right between us.";
-      }
-
-      // Choice 5: I need more time 💔 (no2.html)
-      else if (choice === 5) {
-        title.innerHTML = "Take all the time you need 🤍";
-        message.innerHTML = "I understand. I will be here when you're ready. I’m not going anywhere.<br><br>" +
-          "My heart will always choose you, and I’ll wait for you to feel safe enough to talk.<br><br>" +
-          "Take care of yourself, and know that I’ll always be here when you need me.";
-
-        // Adding a button for when they're ready (no2.html)
-        buttons.innerHTML = `
-          <a href="javascript:void(0)" onclick="nextPage(7)">Come back when you're ready 💖</a>
-        `;
-      }
-
-      // Choice 6: Let’s make things right together 💑 (yes.html)
-      else if (choice === 6) {
-        title.innerHTML = "We’re back on track 💖";
-        message.innerHTML = "Thank you for believing in us and giving me a second chance.<br><br>" +
-          "We’ll work together, through thick and thin, because our love is worth it.<br><br>" +
-          "I’ll never stop working to make you feel loved, safe, and appreciated.";
-      }
-
-      // Choice 7: Come back when you're ready 💖 (next step)
-      else if (choice === 7) {
-        title.innerHTML = "I’m here, whenever you’re ready 🖤";
-        message.innerHTML = "Take your time, and when you're ready, we can start over.<br><br>" +
-          "I’ll always be here for you — my heart is waiting, always. 💌";
-        buttons.innerHTML = '';
-      }
-    }
-  </script>
-
 </body>
 
 </html>
+
